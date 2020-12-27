@@ -1,14 +1,15 @@
-import logo from './logo.svg'
 import './App.css'
-import { Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
 function App () {
   return (
     <div className='App'>
-      <Switch>
-        <Route exact={true} path='/' component={HomePage} />
-        <Route exact={true} path='/dashboard' component={dashboard} />
-      </Switch>
+      <BrowserRouter>
+        <Switch>
+          <Route exact={true} path='/' component={HomePage} />
+          <Route exact={true} path='/dashboard' component={dashboard} />
+        </Switch>
+      </BrowserRouter>
     </div>
   )
 }
