@@ -1,5 +1,6 @@
 import './App.css'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import { LinkContainer } from 'react-router-bootstrap'
 
 function App () {
   return (
@@ -18,6 +19,7 @@ function HomePage () {
   return (
     <div className=''>
       <h1>home page</h1>
+      <Link to='dashboard'>dashboard</Link>
     </div>
   )
 }
