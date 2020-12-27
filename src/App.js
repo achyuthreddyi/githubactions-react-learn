@@ -1,7 +1,15 @@
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+
 import './App.css'
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
-
+let data1
 function App () {
+  useEffect(() => {
+    const { data } = axios.get('/api/hello')
+    data1 = data
+  }, [])
+
   return (
     <div className='App'>
       <BrowserRouter>
@@ -17,6 +25,7 @@ function App () {
 function HomePage () {
   return (
     <div className=''>
+      <h1>{data1}</h1>
       <h1>home page</h1>
       <Link to='dashboard'>dashboard</Link>
     </div>
@@ -25,6 +34,7 @@ function HomePage () {
 function dashboard () {
   return (
     <div className=''>
+      <h1>{data1}</h1>
       <h1>dashboard page</h1>
     </div>
   )
