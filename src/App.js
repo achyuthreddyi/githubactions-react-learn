@@ -18,6 +18,7 @@ function App () {
           Learn React
         </a>
         <h1>achyuth</h1>
+        <h2>reddy checking</h2>
       </header>
     </div>
   )
