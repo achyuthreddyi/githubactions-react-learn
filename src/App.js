@@ -25,7 +25,7 @@ function App () {
 function HomePage () {
   return (
     <div className=''>
-      <h1>{data1}</h1>
+      <h1>check {data1}</h1>
       <h1>home page</h1>
       <Link to='dashboard'>dashboard</Link>
     </div>
